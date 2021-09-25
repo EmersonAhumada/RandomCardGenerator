@@ -1,1 +1,46 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+
+.card {
+  display: inline-block;
+  margin: auto;
+  background: white;
+  height: 250px;
+  width: 250px;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  padding-top: 150px;
+  font-size: 150px;
+  position: relative;
+}
+.card::before {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 80px;
+}
+.card::after {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 80px;
+  transform: rotate(180deg);
+}
+.diamante::before,
+.diamante::after {
+  content: "♦";
+}
+.corazon::before,
+.corazon::after {
+  content: "♥";
+}
+.trebol::before,
+.trebol::after {
+  content: "♣";
+}
+.pica::before,
+.pica::after {
+  content: "♠";
+}
